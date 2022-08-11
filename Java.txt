@@ -1,0 +1,54 @@
+var vale como cualquier tipo de atributo (String, int, double...)
+----------------------
+var resultado= (1>2) ? "verdadero" : "falso";
+		var numero=8;
+		resultado= (numero % 2 == 0) ? "numero par" : "numero impar";
+		System.out.println("Resultado = " + resultado );
+		----------------> Este programa imprime "par" al ser la variable numero par (8)
+	
+		int resultado = (3 > 2) ? "Verdadero" : "Falso" ----> ? Para el resultado verdadero y : para el falso
+		--------------------------------------------------
+		Switch se usa normalmente para elegir una opcion en un formulario o para convertir un numero en texto.
+		
+		int numero = 2;
+		String numeroTexto = "Valor desconocido";
+		switch(numero){
+			case 1:
+			numeroTexto= "Uno";
+			break;
+			case 2:
+			numeroTexto="Dos";
+			break;
+			case 3:
+			numeroTexto="Tres";
+			default:
+			numeroTexto="Numero no encontrado";
+		}
+		
+		System.out.println("NumeroTexto= " + numeroTexto); ---> Este programa imprimira por pantalla el texto: Dos
+		------------------------------------------
+		
+		Metodo get sirve para obtener 1 parametro e imprimirlo y el toString se usa para imprimir todos los parámetos.
+		El metodo get para los boolean es con is en vez de get
+		El metodo toString esta definido por defecto al imprimir asi que si está creado, a la hora de imprimir basta con poner solo el nombre del objeto
+		
+		Persona p1 = new Persona;
+		System.out.println(p1); ---> si el metodo toString está creado se va a imprimir de esta forma
+		------------------------------------------
+		Los metodos estaticos se asocian a la clase.
+		Las variables estaticas se asocian al objeto del tipo de la clase. (Persona p1 = new Persona();)
+		This no se puede usar en un contexto estatico, osea que no se puede poner this. en ningun metodo estatico
+		-------------------------------------------
+		Los contadores se ponen en variable estatica porque si no con cada nuevo objeto que se cree, se reinicia.
+		para las variables no estaticas se usa this.
+		-----------------------------------------------
+		Protected sirve para que las clases hijas puedan acceder a la padre (es como public pero en herencias).
+		Con super(int nombre, double sueldo) puedes acceder a los atributos del constructor de la clase padre.
+		
+			@Override
+	public String toString(){
+		return "Empleado { idEmpleado= " + idEmpleado + ", " + "sueldo= " + sueldo +" } " + super.toString(); ------> con super.toString() sobreescribimos el metodo toString de la clase padre.
+	}
+	--------------------------
+	this() llama al constructor vacio de la clase en la que estas
+	super() llama al constructor vacio de la clase padre
